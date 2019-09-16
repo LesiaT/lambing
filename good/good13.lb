@@ -1,0 +1,17 @@
+void f(int i) {
+  while (i < 4)
+    i = i+1
+    g(i)
+  endwhile
+}
+
+void g(int i) {
+  print "hehe"
+  while (i < 3)
+    i = i+1
+    f(i)
+  endwhile
+}
+
+main!
+f(1)

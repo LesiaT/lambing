@@ -1,0 +1,14 @@
+int haha (int y, bool& t) {
+  return y
+}
+
+void hehe (int x, list<int> l) {}
+
+string s = "haha"
+bool p = False
+
+main!
+  int x = 2
+
+  print "Oooops..."
+  haha(x, p, p)

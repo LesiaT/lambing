@@ -1,0 +1,14 @@
+/* Ten program wywala sie przy parsowaniu w linii 11
+   Powodem tego jest brak return w funkcji nie void */
+
+void hehe (int x, list<int> l) {}
+
+string s = "haha"
+bool p = False
+
+int hihi (bool& b) {
+  print "HIHI"
+}
+
+main!
+  print "Oooops..."

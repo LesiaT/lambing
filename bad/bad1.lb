@@ -1,0 +1,17 @@
+// Ten program wywala się przy parsowaniu w linii 11-12
+// Powodem tego jest niedomknięcie nawiasu funkcji
+
+int x
+string s = "haha"
+bool p = False
+
+void hihi () {
+  print "HIHI"
+}
+
+int haha ( {
+  int z
+}
+
+main!
+  print "Oooops..."

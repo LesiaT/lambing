@@ -1,0 +1,13 @@
+list<string> l = ["haha", "hehe", "hihi"]
+
+main!
+  l.new("hoho")
+  print l
+
+  l.delete(1)
+  l[0] = "hqhq"
+  print l
+
+  l.clear()
+  l.new("aaaa")
+  print l

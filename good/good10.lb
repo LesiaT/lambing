@@ -1,0 +1,25 @@
+void fun(list<int> l, list<bool>& b) {
+  int i = 0
+
+  while (i < b.size())
+    b[i] = True
+    i = i+1
+  endwhile
+
+  i = 0
+  while (i < l.size())
+    l[i] = 0
+    i = i+1
+  endwhile
+}
+
+main!
+  int x = 2
+  list<int> li = [0, x, x*x, x*x*x]
+  list<bool> bi = [False, True, True, False, True]
+
+  print li
+  print bi
+  fun(li, bi)
+  print li
+  print bi 

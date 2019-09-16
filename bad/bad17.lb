@@ -1,0 +1,6 @@
+void f(int& x) {
+  print x
+}
+
+main!
+  f(2+2) 

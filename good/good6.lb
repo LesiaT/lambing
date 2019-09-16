@@ -1,0 +1,12 @@
+int x = 3
+
+void nadpisz(int& y) {
+  y = y + 1
+}
+
+main!
+  nadpisz(x)
+  print x
+
+  nadpisz(x)
+  print x

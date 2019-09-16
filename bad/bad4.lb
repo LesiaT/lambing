@@ -1,0 +1,12 @@
+// Ten program wywala sie przy parsowaniu w linii 6
+// Powodem tego jest brak nazwy zmiennej w deklaracji
+
+int
+
+void hehe (int x, list<int> l) {}
+
+string s = "haha"
+bool p = False
+
+main!
+  print "Oooops..."

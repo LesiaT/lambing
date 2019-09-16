@@ -1,0 +1,18 @@
+void do(int x, int& y) {
+  x = x+1
+  y = y+1
+}
+
+main!
+  int a = 4
+  int b = 4
+
+  do(a, b)
+  print a
+  print b
+
+  print "Try again..."
+  do(a, a)
+  print a
+  print b
+

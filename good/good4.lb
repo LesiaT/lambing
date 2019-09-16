@@ -1,0 +1,18 @@
+int fib(int i) {
+  int res
+
+  if (i <= 0) 
+    res = 0
+  elif (i == 1) 
+    res = 1 
+  else
+    res = fib(i-1) + fib(i-2)
+  endif
+
+  return res
+}
+
+main!
+  print fib(1)
+  print fib(4)
+  print fib(6)

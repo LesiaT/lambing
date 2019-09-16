@@ -1,0 +1,17 @@
+int x = 2
+int y = 5
+bool b1, b2
+string s1, s2
+
+main!
+  b1 = True
+  b2 = False
+  s1 = "haha"
+  s2 = "haha"
+
+  while (x < y) 
+    x = x + 2
+    print b1 == b2
+    print s1 <> s2
+    b1 = False
+  endwhile

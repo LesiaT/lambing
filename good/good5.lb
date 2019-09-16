@@ -1,0 +1,19 @@
+void hahaha() {
+  print "haha"
+}
+
+
+void hihi(int& x) {
+  int haha(int y) {
+    return x+y+1
+  }
+
+  print haha(x)
+}
+
+
+main!
+  int a =2
+
+  hahaha()
+  hihi(a)

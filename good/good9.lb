@@ -1,0 +1,10 @@
+list<int> myf(int x) {
+  list<int> l = [x,x,2]
+  
+  return l
+}
+
+main!
+  int d = 3
+  
+  print myf(d)

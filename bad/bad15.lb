@@ -1,0 +1,10 @@
+list<bool> lb
+int x = 2
+
+main!
+  x = x -5
+  lb.new(True)
+  lb.new(False)
+  lb[1] = True
+  print lb [0]
+  print lb[x]

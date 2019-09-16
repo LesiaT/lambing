@@ -1,0 +1,42 @@
+int x = 1
+int y = 8
+
+void printRes() {
+  print x
+  print y
+  print "next"
+}
+
+main!
+  bool s = False
+  bool b = s
+
+  if (x < y)
+    x = x + 2
+  endif
+  printRes()
+
+  if (y < x)
+    x = x - 1
+  else
+    y = y - 1
+  endif
+  printRes()
+
+  if (s)
+    y = 5
+  elif (x == 3)
+    b = True
+    x = 7
+  endif
+  printRes()
+
+  if (b)
+    y = 5
+  elif (x <= y)
+    y = 3
+  else
+    print "Wrong"
+    y = 1
+  endif
+  printRes()

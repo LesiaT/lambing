@@ -1,0 +1,10 @@
+list<bool> lb
+int x = 2000
+int y = -3
+
+main!
+  lb.new(True)
+  lb.new(False)
+  lb[1] = True
+  print lb [0]
+  print lb[x]

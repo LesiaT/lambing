@@ -1,0 +1,12 @@
+// Ten program wywali się w linii 4
+// Powodem tego jest brak przecinków na liście zmiennych w deklaracji
+
+int x y z
+
+void hehe (int x, list<int> l) {}
+
+string s = "haha"
+bool p = False
+
+main!
+  print "Oooops..."

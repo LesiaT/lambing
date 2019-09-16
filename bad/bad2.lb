@@ -1,0 +1,14 @@
+# Ten program wywala się przy parsowaniu w linii 16
+# Powodem tego jest brak main!
+
+void hehe (int x, list<int> l) {}
+
+/* haha */
+string s = "haha"
+bool p = False
+
+void hihi () {
+  print "HIHI"
+}
+
+  print "Oooops..."

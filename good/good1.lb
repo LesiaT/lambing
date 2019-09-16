@@ -1,0 +1,16 @@
+int x,y
+bool b = True
+string witaj = "Hello, World!"
+
+void przywitaj() {
+  print witaj
+}
+
+int trzy() {
+  return 3
+}
+
+main!
+  przywitaj()
+  x = trzy()
+  print x

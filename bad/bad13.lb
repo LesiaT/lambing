@@ -1,0 +1,15 @@
+int x = 4
+int y = 6
+
+void hehe (bool a, list<int> l) {
+  print a
+}
+
+string s = "haha"
+bool p = False
+
+main!
+  list<int> l = [2]
+
+  print "Oooops..."
+  hehe(x, l)

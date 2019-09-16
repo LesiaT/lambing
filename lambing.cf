@@ -1,0 +1,114 @@
+comment "/*" "*/";
+comment "//";
+comment "#";
+
+Program.	Progr		::= [Decl] "main!" [Decl] [Stmt] ;
+
+[].		[Decl]		::= ;
+(:).		[Decl]		::= Decl [Decl] ;
+
+[].		[Stmt]		::= ;
+(:).		[Stmt]		::= Stmt [Stmt] ;
+
+DeclD.		Decl		::= Typ [Ident] ;
+DeclWithV.	Decl		::= Typ Ident "=" Exp;
+DeclFun.	Decl		::= Fun ;
+
+(:[]).		[Ident]		::= Ident ;
+(:).		[Ident]		::= Ident "," [Ident] ;
+
+FuncT.		Fun		::= Typ Ident "(" [FunPar] ")" "{" FunBodyR"}" ;
+Func.		Fun		::= Typ2 Ident "(" [FunPar] ")" "{" FunBody "}";
+
+FuncBodyWithR.	FunBodyR	::= [Decl] [Stmt] "return" Exp ;
+FuncBody.	FunBody		::= [Decl] [Stmt];
+
+[].		[FunPar]	::= ;
+(:[]).		[FunPar]	::= FunPar ;
+(:).		[FunPar]	::= FunPar "," [FunPar] ;
+
+FunParam.	FunPar		::= Typ Ident ;
+FunParamR.	FunPar		::= TypR Ident ;
+
+SAss.		Stmt		::= Ident "=" Exp ;
+SListAss.	Stmt		::= Ident "[" Exp "]" "=" Exp ;
+SPrint.		Stmt		::= "print" Exp ;
+SIfS.		Stmt		::= "if" "(" Exp ")" [Stmt] "endif" ;
+SIfElS.		Stmt		::= "if" "(" Exp ")" [Stmt] "elif" "(" Exp ")" [Stmt] "endif" ;
+SIfElL.		Stmt		::= "if" "(" Exp ")" [Stmt] "elif" "(" Exp ")" [Stmt] "else" [Stmt] "endif" ;
+SIfL.		Stmt		::= "if" "(" Exp ")" [Stmt] "else" [Stmt] "endif" ;
+SWhile.		Stmt		::= "while" "(" Exp ")" [Stmt] "endwhile";
+SCallFun.	Stmt		::= Ident "(" [Exp] ")" ;
+SCallFunE.	Stmt		::= Ident "(" ")";
+SListClear.	Stmt		::= Ident ".clear()" ;
+SListAppend.	Stmt		::= Ident ".append(" Ident ")" ;
+SListDelete.	Stmt		::= Ident ".delete(" Exp ")" ;
+SListNew.	Stmt		::= Ident ".new(" Exp ")" ;
+
+
+EOpA.		Exp		::= Exp0 Op  Exp0 ;
+EOpB.		Exp0		::= Exp1 Op0 Exp1 ;
+EOpC.		Exp1		::= Exp1 Op1 Exp2 ;
+EOpD.		Exp2		::= Exp2 Op2 Exp3 ;
+
+BoolT.		LamBool		::= "True";
+BoolF.		LamBool		::= "False";
+
+(:[]).		[Integer]	::= Integer;
+(:).		[Integer]	::= Integer "," [Integer] ;
+
+(:[]).		[LamBool]	::= LamBool;
+(:).		[LamBool]	::= LamBool "," [LamBool] ;
+
+(:[]).		[Exp]	::= Exp;
+(:).		[Exp]	::= Exp "," [Exp] ;
+
+EListOfV.	Exp3		::= "[" [Exp] "]";
+EListEmpty.	Exp3		::= "[" "]";
+
+EVar.		Exp3		::= Ident ;
+EListVar.	Exp3		::= Ident "[" Exp "]";
+EInt.		Exp3		::= Integer ;
+EIntM.		Exp3		::= "-" Integer ;
+EString.	Exp3		::= String ;
+EBool.		Exp3		::= LamBool ;
+EFun.		Exp3		::= Ident "(" [Exp] ")" ;
+EFunE.		Exp3		::= Ident "(" ")";
+EListSize.	Exp3		::= Ident ".size()" ;
+
+_.        Exp      ::= Exp0 ;
+_.        Exp0     ::= Exp1 ;
+_.        Exp1     ::= Exp2 ;
+_.        Exp2     ::= Exp3 ;
+_.        Exp3     ::= "(" Exp ")" ;
+
+OPlus.		Op1		::= "+" ;
+OMinus.		Op1		::= "-" ;
+ODiv.		Op2		::= "/" ;
+OMul.		Op2		::= "*" ;
+
+OLt.		Op0		::= "<" ;
+OGt.		Op0		::= ">" ;
+OGe.		Op0		::= ">=" ;
+OLe.		Op0		::= "<=" ;
+
+OEq.		Op0		::= "==" ;
+OEnq.		Op0		::= "<>" ;
+
+OAnd.		Op		::= "&&" ;
+OOr.		Op		::= "||" ;
+
+TInt.		Typ		::= "int" ;
+TBool.		Typ		::= "bool" ;
+TStr.		Typ		::= "string" ;
+TListInt.   	Typ		::= "list<int>" ;
+TListBool.   	Typ		::= "list<bool>" ;
+TListStr.   	Typ		::= "list<string>" ;
+TVoid.          Typ2		::= "void";
+
+TIntR.		TypR		::= "int&" ;
+TBoolR.		TypR		::= "bool&" ;
+TStrR.    	TypR		::= "string&" ;
+TListIntR.   	TypR		::= "list<int>&" ;
+TListBoolR.   	TypR		::= "list<bool>&" ;
+TListStrR.   	TypR		::= "list<string>&" ;

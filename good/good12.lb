@@ -1,0 +1,13 @@
+int x = 0
+
+void hehe() {
+  if (x < 5)
+    x = x + 1
+    hehe()
+  endif
+  
+  print "Finish"
+}
+
+main!
+  hehe()

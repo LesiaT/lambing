@@ -1,0 +1,26 @@
+int gf = 2
+
+int f(int x) {
+  bool h() {
+    gf = 4
+    return True
+  }
+
+  int g(int y) {
+    int h() {
+      return y
+    }
+    gf = 5
+    return h() + f(y)
+  }
+
+  while (x < 3)
+    x = x + 1
+    print g(x)
+  endwhile
+  return 4
+}
+
+
+main!
+  print f(1)
